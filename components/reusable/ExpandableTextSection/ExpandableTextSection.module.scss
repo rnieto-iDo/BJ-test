@@ -1,0 +1,35 @@
+@import '../../../styles/globals/mixins/breakpoints.scss';
+@import '../../../styles/globals/variables/colors.scss';
+
+.Main {
+    display: grid;
+    @include responsive-rule(grid-template-columns, repeat(2, 1fr), repeat(2, 1fr), repeat(2, 1fr), repeat(2, 1fr), repeat(1, 1fr));
+    @include responsive-rule(gap, 24px, 24px, 16px, 16px, 16px);
+    .Image {
+        position: relative;
+        width: 100%;
+        @include responsive-rule(height, 616px, 484px, 342px, 274px, 178px);
+    }
+    .Content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .Title {
+            font-family: "ABC Arizona Flare Light";
+            font-weight: 300;
+            @include responsive-rule(font-size, 40px, 30px, 30px, 24px, 24px);
+        }
+        .Description {
+            font-family: "Neue Haas Unica Pro";
+            font-weight: 400;
+            @include responsive-rule(font-size, 18px, 16px, 16px, 15px, 15px);
+        }
+        .ViewMoreButton {
+            text-decoration: underline;
+            font-family: "Neue Haas Unica Pro";
+            font-weight: 400;
+            @include responsive-rule(font-size, 30px, 26px, 26px, 21px, 18px);
+            @include responsive-rule(margin-top, 40px, 32px, 24px, 16px, 16px);
+        }
+    }
+}

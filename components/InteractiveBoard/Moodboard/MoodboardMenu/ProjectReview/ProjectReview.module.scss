@@ -1,0 +1,48 @@
+@import '../../../../../styles/globals/variables/colors.scss';
+@import '../../../../../styles/globals/mixins/breakpoints.scss';
+
+.MainContainer {
+    height: 100%;
+    width: 100%;
+    .TopContainer{
+        padding-left: 24px;
+        padding-right: 40px;
+        width: 100%;
+        height: 40px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        font-family: "Neue Haas Unica Pro";
+        .LeftLabel {
+            font-size: 20px;
+            font-weight: 400;
+        }
+        .RightLabel {
+            font-size: 16px;
+            font-weight: 400;
+            text-decoration: underline;
+            height: 20px;
+        }
+    }
+    .ScrollContainer{
+        overflow-y: auto;
+        width: 100%;
+        height: 710px;
+        padding-left: 24px;
+        padding-right: 40px;
+    }
+    .Button {
+        z-index: 10;
+        width: 100%;
+        height: 50px;
+        background-color: $black;
+        color: $white;
+        font-family: "Neue Haas Unica Pro";
+        font-weight: 400;
+        @include responsive-rule(font-size, 16px, 14px, 14px, 13px, 13px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}

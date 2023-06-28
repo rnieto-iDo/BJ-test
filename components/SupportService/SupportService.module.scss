@@ -1,0 +1,25 @@
+@import '../../styles/globals/mixins//breakpoints.scss';
+@import '../../styles/globals/variables/colors.scss';
+
+.SupportService {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid $black;
+
+  @include responsive-rule(width, 908px, 783px, 635px, 508px, 100%);
+  @include responsive-rule(padding, 40px 0, 40px 0, 24px 0, 16px 0);
+
+  @include lower-then-sm {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .ServiceName {
+    font-family: 'ABC Arizona Flare Light';
+    letter-spacing: -0.01em;
+    line-height: 125%;
+
+    @include responsive-rule(font-size, 40px, 30px, 30px, 24px, 19px);
+    @include responsive-rule(width, 211px, 179px, 146px, 115px, 115px);
+  }
+}

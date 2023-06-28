@@ -1,0 +1,102 @@
+@import '../../../styles/globals/mixins/breakpoints.scss';
+
+.FormOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .FormContainer {
+        overflow: auto;
+        margin-top: 3rem;
+        padding: 2rem 0;
+        max-width: 100%;
+        max-height: 100%;
+        background-color: white;
+        @include responsive-rule(width, 988px, 669px, 537px, 441px, 100%);
+
+        .Header,
+        .Elements,
+        .Footer {
+            margin: 0 2rem;
+        }
+
+        .Header {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            font-family: 'ABC Arizona Flare Variable';
+            @include responsive-rule(font-size, 40px, 30px, 30px, 30px, 21px);
+        }
+
+        .Elements {
+            .ContainerChkBox30 {
+                display: flex;
+                flex-direction: row;
+            }
+
+            .AllImages {
+                margin: 1rem 0;
+                display: grid;
+                @include responsive-rule(grid-template-columns,
+                        repeat(4, 1fr),
+                        repeat(4, 1fr),
+                        repeat(3, 1fr),
+                        repeat(3, 1fr),
+                        repeat(2, 1fr)
+                );
+                gap: 1rem;
+
+                .ImageContainer {
+                    position: relative;
+                    @include responsive-rule(height, 209px, 134px, 147px, 200px, 200px);
+
+                    .Image {
+                        object-fit: cover;
+                    }
+
+                    .CheckBox {
+                        padding: 0.5rem;
+                        justify-content: flex-end;
+                        img {
+                            background-color: white;
+                        }
+                        div:nth-child(2) {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+
+        .Footer {
+            text-align: center;
+            button {
+                padding: 1rem 3rem;
+                color: #7C7C7A;
+                background-color: rgba(206, 206, 202, 0.4);
+            }
+        }
+    }
+
+    // hide form scrollbar
+    .FormContainer::-webkit-scrollbar {
+        width: 0;
+    }
+
+    // separator style
+    :global(.container-with-separator) {
+        padding: 0px;
+    }
+    :global(.container-with-separator::after) {
+        opacity: 1;
+        margin: 1.5rem 0;
+    }
+}

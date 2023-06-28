@@ -1,0 +1,220 @@
+@import '../../styles/globals/mixins/breakpoints.scss';
+@import '../../styles/globals/variables/colors.scss';
+
+.MagentoContentContainer {
+    display: flex;
+    @include responsive-rule(flex-direction, row, row, row, row, column);
+
+    .MagentoContentContainerLeft {
+        display: flex;
+        flex:1;
+        flex-direction: column;
+        @include responsive-rule(padding, 0, 0, 0, 0, 0 16px);
+        @include responsive-rule(gap, 38px, 40px, 18px, 16px);
+        div {
+            position: relative;
+            @include responsive-rule(height, 972px, 707px, 504px, 409px, 288px);
+            @include responsive-rule(width, 972px, 707px, 504px, 409px, 100%);
+        }
+    }
+    .MagentoContentContainerRight {
+        display: flex;
+        flex:1;
+        flex-direction: column;
+        @include responsive-rule(padding, 40px 116px, 24px 140px, 16px 32px, 16px 32px, 16px);
+
+        .MagentoContentForm {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            .MagentoContentTitle {
+                font-family: 'ABC Arizona Flare Light';
+                font-weight: 300;
+                @include responsive-rule(font-size, 54px, 40px, 40px, 30px, 21px);
+                @include responsive-rule(line-height, 115%, 120%, 120%, 120%, 125%);
+                @include responsive-rule(padding-top, 40px, 24px, 16px, 16px, 0);
+            }
+
+            .MagentoContentDescription {
+                display: flex;
+                flex-direction: column;
+                @include responsive-rule(margin-top, 24px, 24px, 16px, 16px);
+
+                .MagentoDescriptionTitle {
+                    display: flex;
+                    font-weight: 400;
+                    font-family: 'Neue Haas Unica Pro';
+                    @include responsive-rule(font-size, 16px, 14px, 14px, 12px, 12px);
+                    @include responsive-rule(margin-top, 24px, 16px, 16px, 16px, 8px);
+                    @include responsive-rule(flex-direction, row, column, column, column, column);
+                    @include responsive-rule(gap, 24px, 24px, 8px, 8px, 8px);
+
+                    .MagentoTitleLeft {
+                        color: $black;
+                        text-transform: uppercase;
+                        @include responsive-rule(line-height, 150%, 150%, 150%, 135%, 135%);
+                        @include responsive-rule(letter-spacing, 11%, 11%, 11%, 8%, 9%);
+                        .label {
+                            color: rgb(0, 0, 0, 0.5);
+                        }
+                        .MagentoTitleBy {
+                            text-transform: lowercase;
+                            margin-left: 5px;
+                        }
+                        .value {
+                            margin-left: 5px;
+                        }
+                    }
+                    .MagentoTitleRight {
+                        line-height: 135%;
+                        color: rgb(0, 0, 0, 0.5);
+                        .rightValue {
+                            margin-left: 5px;
+                            color: $black;
+                        }
+                    }
+                }
+
+                .MagentoDescription {
+                    font-family: 'Neue Haas Unica Pro';
+                    font-weight: 400;
+                    @include responsive-rule(margin-top, 154px, 92px, 80px, 261px, 48px);
+                    @include responsive-rule(font-size, 18px, 16px, 16px, 15px, 14px);
+                    @include responsive-rule(line-height, 135%, 135%, 135%, 135%, 140%);
+                    @include responsive-rule(letter-spacing, 6%, 8%, 8%, 8%, 8%);
+                }
+
+                .MagentoPairs {
+                    display: flex;
+                    flex-direction: row;
+                    color: $gray1;
+
+                    @include responsive-rule(margin-top, 18px, 16px, 16px, 16px, 16px);
+                    @include responsive-rule(font-size, 16px, 14px, 14px, 12px, 12px);
+                    @include responsive-rule(line-height, 135%, 135%, 135%, 135%, 140%);
+                    @include responsive-rule(letter-spacing, 6%, 8%, 8%, 8%, 8%);
+
+                    .pairsWith {
+                        text-transform: uppercase;
+                        margin-left: 5px;
+                        color: $black;
+                    }
+                }
+            }
+
+            .MagentoAccordionContainer {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                margin-top: 20px;
+                border-bottom: 1px solid $black;
+
+                .MagentoAccordion {
+                    border-top: 1px solid $black;
+                    @include responsive-rule(font-size, 18px, 12px);
+
+                    :global(.accordion-container) {
+                        font-family: 'Neue Haas Unica Pro';
+                        font-weight: 400;
+                        @include responsive-rule(font-size, 18px, 12px, 12px, 12px, 12px);
+                        @include responsive-rule(height, 55px, 37px, 37px, 37px, 37px);
+                    }
+
+                    .ContentWrapper {
+                        margin-bottom: 10px;
+                    }
+
+                    .KeyValuePairWrapper {
+                        display: flex;
+                        line-height: 135%;
+                        @include responsive-rule(font-size, 16px, 14px, 14px, 13px, 12px);
+                        @include responsive-rule(letter-spacing, 8%, 8%, 8%, 9%, 9%);
+                        .PairLabel {
+                            font-family: 'Neue Haas Unica Pro';
+                            color: rgba(0, 0, 0, 0.5);
+                            @include responsive-rule(width, 209px, 207px, 207px, 165px, 136px);
+                        }
+                    }
+                }
+            }
+
+            .MagentoAddToCart {
+                width: 100%;
+                font-family: "Neue Haas Unica Pro";
+                font-weight: 400;
+                @include responsive-rule(height, 54px, 43px, 43px, 41px, 41px);
+                @include responsive-rule(margin-top, 24px, 16px, 16px, 16px, 16px);
+                @include responsive-rule(font-size, 16px, 14px, 14px, 12px, 12px);
+            }
+            .MagentoError {
+                width: 100%;
+                font-family: "Neue Haas Unica Pro";
+                font-weight: 400;
+                color: $red2;
+                text-align: center;
+                @include responsive-rule(font-size, 16px, 14px, 14px, 13px, 12px);
+            }
+            .MagentoLeadTime {
+                display: flex;
+                width: 100%;
+                flex-direction: row;
+                justify-content: center;
+                font-family: "Neue Haas Unica Pro";
+                font-weight: 400;
+                @include responsive-rule(font-size, 16px, 16px, 16px, 12px, 12px);
+                @include responsive-rule(margin-top, 16px, 16px, 16px, 8px, 8px);
+            }
+            .MagentoButtons {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                width: 100%;
+                @include responsive-rule(margin-top, 48px, 16px, 16px, 16px, 16px);
+
+                .MagentoButton {
+                    width: 47%;
+                    background-color: #ffffff;
+                    color: $black;
+                    font-family: "Neue Haas Unica Pro";
+                    font-weight: 400;
+                    font-size: 16px;
+                    border: 1px solid $black;
+                    @include responsive-rule(height, 54px, 43px, 43px, 41px, 41px);
+                    @include responsive-rule(font-size, 16px, 14px, 14px, 12px, 12px);
+                    .Disabled{
+                        color: $gray2 !important;
+                        border: 1px solid $gray2 !important
+                    }
+                }
+            }
+        }
+    }
+}
+
+.MagentoImage {
+    width: 100%;
+    height: 1080px;
+    margin-top: 40px;
+    background-color: #ffffff;
+    .ImageStyle {
+        display: flex;
+        flex-direction: row;
+        width: 50%;
+        height: 100%;
+        position: relative;
+    }
+}
+
+.MagentoConfiguratorContainer {
+    width: 100%;
+    height: 1080px;
+    margin-top: 96px;
+    margin-bottom: 96px;
+    position: relative;
+}
+
+.Configure {
+    @include responsive-rule(padding-top, 72px, 54px, 54px, 52px, 46px);
+    @include responsive-rule(margin-bottom, 96px, 80px, 64px, 64px, 48px);
+}

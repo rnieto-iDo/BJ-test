@@ -1,0 +1,4 @@
+@import "../../../styles/globals/mixins/breakpoints.scss";
+.Divider {
+    @include responsive-rule(padding, 0 40px, 0 40px, 0 32px, 0 32px, 0 16px);
+}

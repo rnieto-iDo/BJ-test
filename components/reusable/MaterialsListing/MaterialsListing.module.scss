@@ -1,0 +1,76 @@
+@import '../../../styles/globals/mixins/breakpoints.scss';
+@import '../../../styles/globals/variables/colors.scss';
+
+.Main {
+    width: 100%;
+    .TitleContainer {
+        .Title {
+            font-family: 'ABC Arizona Flare Light';
+            font-weight: 300;
+            color: $gray1;
+            @include responsive-rule(font-size, 54px, 40px, 40px, 30px, 32px);
+            @include responsive-rule(margin-bottom, 48px, 11px, 62px, 6px, 18px);
+        }
+        .SubTitle{
+            font-family: 'Neue Haas Unica Pro';
+            font-weight: 400;
+            color: $black;
+            @include responsive-rule(font-size, 18px, 16px, 16px, 13px, 12px);
+            @include responsive-rule(margin-bottom, 96px, 54px, 51px, 28px, 24px);
+        }
+    }
+    .Tabs {
+        :global(.ant-tabs-tab-btn) {
+            color: $black !important;
+            font-family: "Neue Haas Unica Pro";
+            font-weight: 500 !important;
+        }
+        :global(.ant-tabs-tab-active) {
+            text-decoration-style: solid;
+            color: $gray1 !important;
+            font-family: "Neue Haas Unica Pro";
+            font-weight: 500 !important;
+        }
+        :global(.ant-tabs-ink-bar) {
+            text-decoration-style: solid;
+            background-color: $black;
+            color: $gray1 !important;
+            font-family: "Neue Haas Unica Pro";
+            font-weight: 500;
+        }
+    }
+    .Grid {
+        display: grid;
+        @include responsive-rule(grid-template-columns, repeat(8, 1fr), repeat(6, 1fr), repeat(6, 1fr), repeat(6, 1fr), repeat(2, 1fr));
+        @include responsive-rule(column-gap, 24px, 24px, 16px, 16px, 16px);
+        @include responsive-rule(row-gap, 48px, 43px, 40px, 30px, 27px);
+        @include responsive-rule(margin-bottom, 48px, 43px, 20px, 24px, 49px);
+        .GridElement {
+            max-width: none;
+            :global(img){
+                width: 100%;
+            }
+            :global(.text-wrapper){
+                @include responsive-rule(margin-top, 16px, 16px, 11px, 8px, 10px);
+            }
+            :global(.title){
+                font-family: "Neue Haas Unica Pro";
+                font-weight: 400;
+                font-size: 12px;
+            }
+        }
+    }
+    .SeeAll {
+        display: none;
+        width: 100%;
+        // display: flex;
+        flex-direction: row;
+        justify-content: center;
+        @include responsive-rule(margin-bottom, 48px, 42px, 48px, 51px, 22px);
+        .Button {
+            font-family: "Neue Haas Unica Pro";
+            font-weight: 400;
+            @include responsive-rule(font-size, 16px, 14px, 14px, 16px, 16px);
+        }
+    }
+}

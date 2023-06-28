@@ -1,0 +1,113 @@
+@import "../../../styles/globals/mixins/breakpoints.scss";
+@import "../../../styles/globals/variables/colors.scss";
+
+.Timeline {
+    position: relative;
+    overflow-x: scroll;
+
+    background-color: #1e1e1e;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .TimelineImage {
+        height: 1080px;
+
+        @include lower-then-lg {
+            height: 775px;
+        }
+        @include lower-then-md {
+            height: 540px;
+        }
+        @include lower-then-md {
+            height: 568px;
+        }
+    }
+
+    .OverlappingTextWrapper {
+        width: 100%;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        color: $white;
+        padding-bottom: 32px;
+        padding-left: 72px;
+        padding-right: 43px;
+
+        @include responsive-rule(margin-top, -120px, -100px, -100px, -10px, -10px);
+
+        @include lower-then-xl {
+            padding-bottom: 32px;
+            padding-left: 32px;
+            padding-right: 32px;
+        }
+
+        @include lower-then-sm {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 24px;
+        }
+
+        .TimelineText {
+            margin: 0px;
+            font-family: "ABC Arizona Flare Light";
+            font-style: normal;
+            font-weight: 300;
+            font-size: 40px;
+            line-height: 125%;
+            display: flex;
+            align-items: flex-end;
+            letter-spacing: -0.01em;
+            width: 1226px;
+
+            @include lower-then-xl {
+                font-size: 30px;
+                line-height: 125%;
+                width: 879px;
+            }
+            @include lower-then-lg {
+                font-size: 30px;
+                line-height: 125%;
+                width: 603px;
+            }
+            @include lower-then-md {
+                width: 100%;
+                font-size: 30px;
+                line-height: 125%;
+            }
+
+            @include lower-then-sm {
+                font-size: 19px;
+                line-height: 125%;
+            }
+        }
+
+        .TimelineLink {
+            color: $white;
+            font-family: "Neue Haas Unica Pro";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 30px;
+            line-height: 31px;
+            text-align: right;
+            letter-spacing: 0.05em;
+            text-decoration: underline;
+
+            @include lower-then-xl {
+                font-size: 26px;
+                line-height: 26px;
+                letter-spacing: 0.05em;
+            }
+            @include lower-then-md {
+                font-size: 21px;
+                line-height: 21px;
+                letter-spacing: 0.05em;
+            }
+
+            @include lower-then-sm {
+                font-size: 18px;
+                line-height: 18px;
+                letter-spacing: 0.05em;
+            }
+        }
+    }
+}

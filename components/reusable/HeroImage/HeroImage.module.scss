@@ -1,0 +1,41 @@
+@import '../../../styles/globals/mixins/breakpoints.scss';
+.HeroImage {
+    position: relative;
+
+    .TextContainer {
+        display: flex;
+        position: absolute;
+        height: 100%;
+        position: relative;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .Title {
+            font-family: "ABC Arizona Flare Light";
+            font-weight: 300;
+            font-size: 90px;
+            line-height: 111px;
+            text-align: center;
+            letter-spacing: 0.01em;
+            margin: 0px;
+
+            @include responsive-rule(font-size, 80px, 55px, 55px, 44px, 32px);
+            @include responsive-rule(line-height, 96px, 66px, 66px, 52px, 38px);
+
+            @include lower-then-sm {
+                width: 100%;
+            }
+        }
+
+        .AdditionalText {
+            font-family: 'Neue Haas Unica Pro';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 135%;
+            letter-spacing: 0.08em;
+        }
+    }
+}

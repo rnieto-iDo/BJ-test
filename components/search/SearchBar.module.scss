@@ -1,0 +1,223 @@
+@import '../../styles/globals/mixins/breakpoints.scss';
+@import '../../styles/globals/variables/colors.scss';
+
+
+.Opened {
+   display: block !important; 
+}
+
+.SearchBarContainer{
+    display: none;
+    background-color: #fff !important;
+  
+    @include responsive-rule(height, 284px, 262px, 246px, 238px, 100vh);
+    z-index: 8000 !important;
+    position: relative;
+
+    margin-top: 0px !important;
+}
+
+.Image {
+    position: relative;
+    @include responsive-rule(height, 600px, 438px, 300px, 228px, 174px);
+    width: 100%;
+}
+
+.SearchBar {
+    background-color: #fff !important;
+   //@include responsive-rule(width, 1880px, 1355.5px, 959px, 770px, 288px);
+    @include responsive-rule(padding-left, 40px, 40px, 32px, 32px, 16px);
+    @include responsive-rule(padding-right, 40px, 44.5px, 33px, 32px, 16px);
+    @include responsive-rule(padding-top, 40px, 40px, 40px, 39px, 0px);
+    @include responsive-rule(padding-bottom, 40px, 40px, 32px, 32px, 42px);
+
+    z-index: 9000;
+    position: relative;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    @include lower-then-sm {
+        flex-direction: column-reverse;
+    }
+
+    .SearchBarInput {   
+        border: none;
+        border-bottom: 2px solid #000;
+        width: 100%;
+        height: 66px;
+        @include responsive-rule(margin-right, 40px, 44.5px, 33px, 32px, 16px);
+
+        :global(on-input){
+            height: 34px !important;
+        }
+
+        :global(ant-input-affix-wrapper){
+            &:hover {
+                border-color: #000 !important;
+            }
+        }
+            
+        :global(input) {
+            font-family: 'Neue Haas Unica Pro';
+            font-size: 24px;
+            font-weight: 400;
+            line-height: 34px;
+            letter-spacing: 0.06em;
+            text-align: left;
+            padding-top: 16px;
+            padding-bottom: 16px;    
+
+            @include responsive-rule(font-size, 24px, 22px, 22px, 30px, 14px);
+        }
+    }
+    
+    .SearchBarClose {
+        @include lower-then-sm {
+            height: 50px;
+            width: 100vw;
+            border-bottom: solid 0.5px;
+            justify-content: right;
+            display: flex;
+            padding-right: 18.25px;
+        }
+    }
+}
+
+.PopularSearches{
+    display: none;
+    background-color: #fff !important;
+
+    z-index: 8000 !important;
+    position: relative;
+
+    @include responsive-rule(padding-left, 40px, 40px, 32px, 32px, 16px);
+    @include responsive-rule(padding-right, 40px, 44.5px, 33px, 32px, 16px);
+
+    display: flex !important;
+    flex-direction: row;
+    // justify-content: space-between;
+
+    .PopularSearchesTitle{
+        font-family: 'Neue Haas Unica Pro';
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 22.5px;
+        letter-spacing: 0.08em;
+        color: #7C7C7A;;
+
+        @include responsive-rule(padding-right, 149px, 149px, 83px, 83px, unset);
+
+        @include lg-screen {
+            font-size: 16px;
+            line-height: 20px;
+        }
+        
+        @include md-screen {
+            font-size: 16px;
+            line-height: 20px;
+        }
+    
+        @include sm-screen {
+            font-size: 15px;
+            line-height: 18.75px;
+            letter-spacing: 0.1em;
+        }
+    
+        @include xs-screen {
+            font-size: 15px;
+            line-height: 18.75px;
+            letter-spacing: 0.1em;
+        }
+    }
+
+    .PopularSearchesItems{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-column-gap: 32px;
+        grid-row-gap: 16px;
+        text-align: left;
+        
+        .ProductFeatureCard1 {
+            grid-area: 1 / 2 / 3 / 4;
+        }
+
+        .PopularSearchesItem{
+
+            font-family: 'Neue Haas Unica Pro';
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 21.6px;
+            letter-spacing: 0.08em;
+            color: #000;
+
+            text-align: left;
+        
+            @include lg-screen {
+                font-size: 14px;
+                line-height: 18.9px;
+                //letter-spacing: 0.8em;
+            }
+        
+            @include md-screen {
+                font-size: 14px;
+                line-height: 18.9px;
+                //letter-spacing: 0.8em;
+            }
+        
+            @include sm-screen {
+                font-size: 15px;
+                line-height: 20.25px;
+                //letter-spacing: 0.8em;
+            }
+        
+            @include xs-screen {
+                font-size: 12px;
+                line-height: 16.2px;
+                //letter-spacing: 0.9em;
+            }
+        }
+    }
+}
+
+.SearchResults{
+    background-color: #fff !important;
+
+    z-index: 8000 !important;
+    position: fixed;
+        
+    display: flex !important;
+    flex-direction: column;
+    //justify-content: space-between;
+
+    overflow: overlay !important;
+    height: -webkit-fill-available;
+    width: 100vw;
+
+    .SearchResultTitle{
+        font-family: 'Neue Haas Unica Pro';
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 22.5px;
+        letter-spacing: 0.08em;
+        color: #7C7C7A;
+
+        z-index: 7000 !important;
+    }
+
+}
+
+.Overlay {
+    display: none;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+
+    background: rgba(0, 0, 0, .5);
+    z-index: 100
+ }

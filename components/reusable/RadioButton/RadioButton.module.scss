@@ -1,0 +1,30 @@
+@import '../../../styles/globals/mixins/breakpoints.scss';
+@import '../../../styles//globals/variables/colors.scss';
+
+.Main {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    .Empty {
+        width: 24px;
+        height: 24px;
+        border-radius: 12px;
+        border: 1px solid $black;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .Selected {
+        width: 12px;
+        height: 12px;
+        border-radius: 6px;
+        background-color: $black;
+    }
+    .Label {
+        font-family: "Neue Haas Unica Pro";
+        font-weight: 400;
+        margin-left: 8px;
+        @include responsive-rule(font-size, 20px, 16px, 16px, 15px, 14px);
+    }
+}

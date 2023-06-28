@@ -1,0 +1,29 @@
+.MoodboardViewer {
+  position: relative;
+
+  .DownloadButton {
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+  }
+  .SaveMoodboardButton {
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+  }
+
+  .ErrorMessage {
+    position: absolute;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, 0);
+    color: red;
+    background-color: rgb(0, 0, 0, 0.5);
+    width: 400px; /* Need a specific value to work */
+    height: 50px;
+  }
+}

@@ -1,0 +1,33 @@
+@import '../../../styles/globals/variables/colors.scss';
+@import '../../../styles/globals/mixins/breakpoints.scss';
+
+.ProductConfiguratorControls {
+    .AddToCartButton {
+        font-family: 'Neue Haas Unica Pro';
+    }
+    .MagentoError {
+        width: 100%;
+        font-family: "Neue Haas Unica Pro";
+        font-weight: 400;
+        color: $red2;
+        text-align: center;
+        @include responsive-rule(font-size, 16px, 14px, 14px, 13px, 12px);
+    }
+    .SaveControls {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 66px;
+
+        span {
+            margin-left: 4px;
+            margin-right: 4px;
+        }
+
+        .TextButton {
+            width: max-content;
+            padding: 0;
+            text-decoration: underline;
+        }
+    }
+}

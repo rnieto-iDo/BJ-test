@@ -1,0 +1,61 @@
+@import '../../../styles/globals/mixins//breakpoints.scss';
+@import '../../../styles/globals/variables/colors.scss';
+
+.Contact {
+  display: flex;
+  margin-bottom: 18px;
+  line-height: 135%;
+  letter-spacing: 0.08em;
+
+  @include responsive-rule(font-size, 16px, 14px, 14px, 13px, 12px);
+
+  @include lower-then-sm {
+    flex-direction: column;
+    margin-bottom: 24px;
+  }
+
+  .ContactName {
+    color: $gray1;
+    @include responsive-rule(width, 209px, 209px, 146px, 115px, 100%);
+
+    @include responsive-rule(margin-right, 24px, 24px, 16px, 16px, 8px);
+  }
+  .ContactLink {
+    text-decoration: none !important;
+
+    &.isEmail:hover {
+      text-decoration: underline 2px black !important;
+    }
+
+    &.isPhoneNumber:hover {
+      text-decoration: underline 2px black !important;
+    }
+  }
+
+  .ContactValue {
+    @include responsive-rule(width, 325px, 325px, 309px, 246px, 100%);
+    text-align: left;
+  }
+
+  .ContactLink {
+    @include responsive-rule(width, 325px, 325px, 309px, 246px, 100%);
+
+    text-align: left;
+  }
+
+  .ContactLink:hover {
+    border-bottom: none;
+  }
+
+  .ContactContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .RetailersLink {
+    @include responsive-rule(margin-top, 40px, 40px, 40px, 40px, 60px);
+    &:hover {
+      border-bottom: none;
+    }
+  }
+}

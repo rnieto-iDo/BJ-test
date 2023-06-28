@@ -1,0 +1,32 @@
+@import '../../../../../../styles/globals/variables/colors.scss';
+
+.MainContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 38px;
+    width: 100%;
+    border-radius: 50px;
+    background-color: $gray5;
+    .TabItem {
+        font-family: "Neue Haas Unica Pro";
+        font-size: 16px;
+        font-weight: 400;
+        width: 55%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50px;
+        z-index: 1;
+    }
+    .TabItemSelected{
+        @extend .TabItem;
+        background-color: black;
+        color: $white;    
+    }
+    .TabItemNotSelected{
+        @extend .TabItem;
+        background-color: transparent;
+    }
+}

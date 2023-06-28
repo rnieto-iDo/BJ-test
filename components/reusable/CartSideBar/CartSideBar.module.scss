@@ -1,0 +1,195 @@
+@import '../../../styles/globals/mixins/breakpoints.scss';
+@import '../../../styles/globals/variables/colors.scss';
+
+.Main {
+       position: fixed;
+       top: 0;
+       left: 0;
+       width: 100%;
+       height: 100%;
+       z-index: 100;
+       display: flex;
+       flex-direction: row;
+       .Back {
+        position: relative;
+        flex:1;
+        background-color: $black;
+        opacity: 0.5;
+       }
+       .Sidebar {
+        position: relative;
+        height: 100%;
+        @include responsive-rule(width, 832px, 593px, 504px, 466px, 100%);
+        background-color: $white;
+        display: flex;
+        flex-direction: column;
+        .TopNavigation {
+            width: 100%;
+            display:  flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid $gray3;
+            @include responsive-rule(height, 98px, 86px, 86px, 78px, 60px);
+            @include responsive-rule(padding, 24px 40px, 24px 40px, 24px 32px, 24px 32px, 16px);
+            .NavTitle {
+                font-family: "ABC Arizona Flare Light";
+                font-weight: 300;
+                @include responsive-rule(font-size, 40px, 30px, 30px, 24px, 19px);
+            }
+            .Close{
+                width: 24px;
+                height: 24px;
+            }
+        }
+        .Content {
+            height: 100%;
+            overflow-y: scroll;
+            @include responsive-rule(padding-top, 40px, 32px, 32px, 32px, 24px);
+            @include responsive-rule(padding-bottom, 127px, 59px, 44px, 90px, 40px);
+            .ProductsLabelContainer {
+                    width: 100%;
+                    border-bottom: 1px solid black;
+                    font-family: "Neue Haas Unica Pro";
+                    font-weight: 400;
+                    padding-bottom: 16px;
+                    @include responsive-rule(font-size, 24px, 22px, 22px, 18px, 17px);
+            }
+            .ProductsList {
+                @include responsive-rule(padding-top, 40px, 40px, 32px, 32px, 24px);
+                .Product {
+                    display: grid;
+                    @include responsive-rule(gap, 24px, 24px, 18px, 18px, 18px);
+                    @include responsive-rule(grid-template-columns, repeat(2, 1fr), repeat(2, 1fr), repeat(2, 1fr), repeat(2, 1fr), repeat(1, 1fr));
+                    margin-bottom: 10px;
+                    .ProductImage {
+                        position: relative;
+                        width: 100%;
+                        @include responsive-rule(height, 289px, 188px, 175px, 180px, 255px);
+                    }
+                    .ProductDesc {
+                        font-family: "Neue Haas Unica Pro";
+                        font-weight: 400;
+                        .Title {
+                            @include responsive-rule(margin-bottom, 8px, 8px, 8px, 0, 0);
+                            @include responsive-rule(font-size, 18px, 16px, 16px, 15px, 14px);
+                        }
+                        .Description {
+                            display: flex;
+                            flex-direction: row;
+                            color: $gray1;
+                            @include responsive-rule(font-size, 18px, 14px, 16px, 15px, 14px);
+                            .BlackText {
+                                color: $black;
+                            }
+                        }
+                    }
+                }
+                .Table {
+                    width: 100%;
+                    border-top: 1px solid $black;
+                    @include responsive-rule(margin-top, 60px, 40px, 20px, 0, 0);
+                    @include responsive-rule(display, block, block, block, none, none);
+                    .TableItem {
+                        font-family: "Neue Haas Unica Pro";
+                        font-weight: 400;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        align-items: center;
+                        border-bottom: 1px solid $black;
+                        @include responsive-rule(height, 32px, 32px, 32px, 34px, 32px);
+                        @include responsive-rule(font-size, 18px, 14px, 13px, 13px, 12px);
+                    }
+                }
+                .Table2 {
+                    @include responsive-rule(display, none, none, none, block, block);
+                    @include responsive-rule(margin-top, 0, 0, 0, 24px, 16px);
+                }
+                .QuantityContainer {
+                        width: 100%;
+                        height: 31px;
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        margin-top: 24px;
+                        margin-bottom: 10px;
+                        .QuantityNumber {
+                            margin: 0 16px;
+                            font-family: "Neue Haas Unica Pro";
+                            font-weight: 400;
+                            @include responsive-rule(font-size, 24px, 22px, 22px, 20px, 19px);
+                        }
+                        .QuantityButton {
+                            height: 24px;
+                            width: 24px;
+                            border-radius: 12px;
+                            border: 1px solid $black;
+                            font-family: "Lausanne";
+                            font-size: 16px;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: center;
+                        }
+                        .RemoveProduct {
+                            font-family: "Neue Haas Unica Pro";
+                            font-weight: 400;
+                            @include responsive-rule(margin-left, 24px, 24px, 24px, 12px, 12px);
+                            @include responsive-rule(font-size, 16px, 14px, 14px, 15px, 12px);
+                        }
+                    }
+            }
+            .MaterialLabelContainer {
+                @include responsive-rule(font-size, 24px, 22px, 22px, 20px, 20px);
+                @include responsive-rule(margin-top, 96px, 80px, 32px, 64px, 48px);
+                @include responsive-rule(margin-bottom, 40px, 40px, 32px, 24px, 19px);
+            }
+            .CartMaterialCard {
+                display: grid;
+                @include responsive-rule(gap, 24px, 24px, 16px, 16px, 16px);
+                @include responsive-rule(grid-template-columns, repeat(2, 1fr), repeat(2, 1fr), repeat(2, 1fr), repeat(2, 1fr), repeat(1, 1fr));
+                @include responsive-rule(margin-top, 40px, 40px, 32px, 24px, 44px);
+                .MaterialImage {
+                    position: relative;
+                    width: 100%;
+                    @include responsive-rule(height, 289px, 188px, 175px, 180px, 288px);
+                }  
+                .MaterialDesc {
+                    font-family: "Neue Haas Unica Pro";
+                    font-weight: 400;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    @include responsive-rule(margin-top, 0, 0, 0, 0, 16px);
+                    .MaterialTitle {
+                        @include responsive-rule(font-size, 20px, 19px, 19px, 15px, 15px);
+                    }
+                    .MaterialSKU {
+                        color: $gray1;
+                        @include responsive-rule(font-size, 18px, 16px, 16px, 15px, 15px);
+                    }
+                    .RemoveMaterial {
+                        @include responsive-rule(margin-top, 0, 0, 0, 0, 24px);
+                        @include responsive-rule(font-size, 16px, 14px, 14px, 15px, 15px);
+                    }
+                }
+            }
+        }
+        .ContinueButton{
+            width: 100%;
+            background-color: $black;
+            color:  $white;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            font-family: "Neue Haas Unica Pro";
+            font-weight: 400;
+            cursor: pointer;
+            @include responsive-rule(font-size, 16px, 14px, 14px, 13px, 12px);
+            @include responsive-rule(height, 54px, 51px, 51px, 50px, 48px);
+        }
+       }
+    }
+

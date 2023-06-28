@@ -1,0 +1,28 @@
+@import '../../../styles//globals/mixins/breakpoints.scss';
+@import '../../../styles//globals/variables/colors.scss';
+
+.ProductConfigurator {
+    display: flex;
+    width: 100%;
+    border: 0.5px solid $gray3;
+    // @include responsive-rule(height, 1009px);
+    @include responsive-rule(grid-template-columns, repeat(16, 1fr));
+    @include responsive-rule(height, 1009px, 684px, 483px, 381px, 683px);
+
+    @include lower-then-sm {
+        flex-direction: column;
+    }
+    .ProductViewer {
+        position: relative;
+
+        background-color: #e8e8e8;
+
+        @include responsive-rule(width, 1303px + 40px +87px, 1025px, 706px, 572px, 100%);
+        // @include responsive-rule(height, 794px, 684px, 472px, 381px, 213px);
+        // @include responsive-rule(margin, 175px 89px 40px 40px, 0px, 0px);
+
+        @include lower-then-sm {
+            min-height: 320px;
+        }
+    }
+}

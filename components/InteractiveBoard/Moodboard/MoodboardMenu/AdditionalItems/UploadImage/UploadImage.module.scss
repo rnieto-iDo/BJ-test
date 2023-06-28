@@ -1,0 +1,49 @@
+@import '../../../../../../styles/globals/variables/colors.scss';
+.UploadImage{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    .UploadButtton {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 48px;
+        width: 442px;
+        border: 1px solid $black;
+        font-family: "Neue Haas Unica Pro";
+        font-size: 16px;
+        font-weight: 400;
+    }
+    .Input{
+        display: none;
+    }
+    .ErrorMessageContainer{
+        width: 442px;
+        height: 16px;
+        font-size: 12px;
+        font-family: "Neue Haas Unica Pro";
+        font-weight: 400;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: $red2;
+        margin-top: 10px;
+        text-align: center;
+    }
+    .MessageContainer {
+        width: 442px;
+        height: 48px;
+        font-size: 18px;
+        font-family: "Neue Haas Unica Pro";
+        font-weight: 400;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-top: 24px;
+    }
+}

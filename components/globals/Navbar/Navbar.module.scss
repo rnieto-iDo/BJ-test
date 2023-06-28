@@ -1,0 +1,39 @@
+@import '../../../styles/utils/breakpoints.scss';
+
+.HomePageAppBar {
+    background-color: transparent;
+    border: none;
+    :global(.bottom-divider) {
+        display: none;
+    }
+
+    .on-link {
+        border-bottom: 1px solid transparent !important;
+
+        &:hover{
+            border-bottom: 1px solid black !important;
+        }
+    }
+}
+
+.HomePageAppBar > * > * {
+    color: #ffffff !important;
+    :global(.on-link) {
+        color: #ffffff;
+        border-bottom: 1px solid transparent !important;
+    }
+}
+
+.OtherPageAppBar {
+    font-family: "Neue Haas Unica Pro";
+    font-weight: 400 !important;
+
+    :global(.on-link) {
+        border-bottom: 1px solid transparent !important;
+
+        &:hover {
+            border-bottom: 1px solid black !important;
+        }
+    }
+}
+

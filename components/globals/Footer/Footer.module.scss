@@ -1,0 +1,11 @@
+.FooterBar {
+    font-family: "Neue Haas Unica Pro";
+
+    :global(.on-link) {
+        border-bottom: 1px solid transparent !important;
+
+        &:hover {
+            border-bottom: 1px solid black !important;
+        }
+    }
+}

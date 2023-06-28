@@ -1,0 +1,68 @@
+@import '../../../../styles//globals/mixins/breakpoints.scss';
+@import '../../../../styles//globals/variables/colors.scss';
+
+.ProductOptions {
+    border-left: 0.5px solid $gray3;
+    background-color: $white;
+
+    @include responsive-rule(width, 490px, 415px, 318px, 262px, 100%);
+
+    .Tabs {
+        display: flex;
+        width: 100%;
+        overflow: auto;
+        border-bottom: 0.5px solid $gray3;
+
+        .Tab {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-family: 'Neue Haas Unica Pro';
+            // flex-shrink: 0;
+            line-height: 135%;
+
+            @include responsive-rule(font-size, 18px, 16px, 12.2602px, 12px);
+            @include responsive-rule(width, 246px, 208px, 159.38px, 131.2px, 142.9px);
+            @include responsive-rule(height, 64px, 64px, 49.04px, 34.13px, 48px);
+            @include responsive-rule(letter-spacing, 0.06em, 0.08em, 0.08em, 0.06em, 0.09em);
+
+            @include lower-then-sm {
+                flex-shrink: 0;
+            }
+        }
+
+        .ActiveTab {
+            border-bottom: 3px solid $black;
+        }
+    }
+    .TabViewerContainer {
+        @include responsive-rule(padding, 32px, 25px, 25px, 0px 18px 18px);
+        // @include responsive-rule(margin-bottom, 24px);
+        .SearchBar {
+            border-bottom: 0.5px solid $gray3;        
+            @include responsive-rule(margin-bottom, 24px, 24px, 17.62px, 19px, 16.7px);
+            :global(.select-label) {
+                display: none;
+            }
+            :global(.select-container){
+                display: none;
+            }
+        }
+        .AttributesGrid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            overflow-y: auto;
+            @include responsive-rule(max-height, 644px, 380px, 260px, 245px, 149.7px);
+            @include responsive-rule(gap, 16px, 12.87px, 9.86px, 8.53px, 16px);
+
+            .AttributeImage {
+                position: relative;
+                background-color: $gray2;
+
+                @include responsive-rule(width, 94px, 75.6px, 57.93px, 50.13px, 60px);
+                @include responsive-rule(height, 94px, 75.6px, 57.93px, 50.13px, 60px);
+            }
+        }
+    }
+}

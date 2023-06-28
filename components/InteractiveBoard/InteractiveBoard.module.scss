@@ -1,0 +1,13 @@
+// @import '../../../styles/globals/mixins/breakpoints.scss';
+@import '../../styles/globals/mixins/breakpoints.scss';
+
+.InteractiveBoard {
+  // @include responsive-rule(padding, 0 40px, 0 40px, 0 32px, 0 32px, 0 16px);
+
+  .Tabs {
+  }
+
+  .TabBar {
+    color: black;
+  }
+}

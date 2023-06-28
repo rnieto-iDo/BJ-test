@@ -1,0 +1,75 @@
+@import '../../styles/globals/mixins/breakpoints.scss';
+@import '../../styles/globals/variables/colors.scss';
+.WarrantyItem {
+  display: flex;
+  margin-left: auto;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-bottom: 1px solid $gray1;
+
+  @include responsive-rule(width, 1492px, 1129px, 100%);
+  @include responsive-rule(padding, 40px 0, 32px 0, 32px 0, 16px 0);
+
+  @include lower-then-sm {
+    flex-direction: column;
+  }
+
+  .LabelWrapper {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Neue Haas Unica Pro';
+
+    @include responsive-rule(width, 442px, 322px, 308px, 246px, 100%);
+
+    @include lower-then-sm {
+      gap: 8px;
+
+      margin-bottom: 16px;
+    }
+    .Label {
+      margin: 0px;
+      width: 100%;
+      text-transform: unset;
+      @include responsive-rule(font-size, 24px, 22px, 22px, 20px, 19px);
+      @include responsive-rule(line-height, 140%, 135%, 135%, 135%, 130%);
+      @include responsive-rule(
+        letter-spacing,
+        0.06em,
+        0.06em,
+        0.06em,
+        0.05em,
+        0.08em
+      );
+    }
+
+    .LabelAdditionalInfo {
+      color: $gray1;
+      line-height: 125%;
+
+      @include responsive-rule(font-size, 18px, 16px, 16px, 15px, 14px);
+      @include responsive-rule(width, 327px, 322px, 227px, 180px, 100%);
+      @include responsive-rule(
+        letter-spacing,
+        0.08em,
+        0.08em,
+        0.08em,
+        0.1em,
+        0.1em
+      );
+    }
+  }
+
+  .Value {
+    font-weight: 400;
+    display: flex;
+    white-space: pre-wrap;
+
+    @include responsive-rule(font-size, 18px, 16px, 14px, 15px, 14px);
+    @include responsive-rule(line-height, 135%, 135%, 135%, 135%, 140%);
+    @include responsive-rule(width, 908px, 783px, 635px, 508px, 100%);
+  }
+
+  .MultiLine {
+    @include responsive-rule(line-height, 48px, 40px, 32px, 32px, 32px);
+  }
+}

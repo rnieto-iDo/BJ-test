@@ -1,0 +1,12 @@
+.MuxPlayer {
+    //position: absolute;
+    top: 0;
+    left: 0;
+    height: inherit;
+    --media-object-fit: cover;
+    --media-object-position: center;
+}
+
+.MuxPlayerNoControls{
+    --controls: none !important
+}

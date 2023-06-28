@@ -1,0 +1,19 @@
+@import '../../../styles/globals/variables/colors.scss';
+
+.Main {
+        height: 24px;
+        width: 24px;
+        border-radius: 12px;
+        border: 1px solid $black;
+        font-family: "Lausanne";
+        font-size: 16px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+}
+.Disabled {
+    background-color: #cececa66;
+    border-color: $gray1;
+}

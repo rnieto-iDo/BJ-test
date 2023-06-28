@@ -1,0 +1,36 @@
+@import '../../../../styles/globals/variables/colors.scss';
+
+.MoodboardItemMenu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    isolation: isolate;
+
+    position: absolute;
+    width: 164px;
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    border: 2px solid $black;
+
+    .MenuItem {
+        font-family: 'Neue Haas Unica Pro';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 135%;
+        letter-spacing: 0.08em;
+
+        color: $black;
+        width: 100%;
+        height: 54px;
+        border-bottom: 2px solid $black;
+        background: $white;
+    }
+
+    :last-child {
+        border: none;
+    }
+}

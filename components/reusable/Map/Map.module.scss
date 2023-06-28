@@ -1,0 +1,12 @@
+@import "../../../styles/globals/mixins/breakpoints.scss";
+
+.Map {
+  @include responsive-rule(height, 960px, 709px, 501px, 402px, 462px);
+  @include responsive-rule(margin,
+      48px 40px 38px 40px,
+      40px,
+      42px 32px 32px 32px,
+      40px 32px 27px 32px,
+      29px 15px 0px 17px
+  );
+}

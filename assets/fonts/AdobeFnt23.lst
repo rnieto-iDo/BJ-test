@@ -1,0 +1,60 @@
+%!Adobe-FontList 1.23
+%Locale:0x409
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:/Volumes/Samsung_T5G/Project Archive (Channel)/CE0000-CHANNEL/INDESIGN/Brand Guidelines/CHANNEL-BRAND-GUIDELINES Folder/Document fonts/AdobeFnt23.lst
+FileLength:1237
+FileModTime:698382019
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:Lausanne-300
+FamilyName:Lausanne
+StyleName:300
+MenuName:Lausanne 250
+StyleBits:2
+WeightClass:400
+WidthClass:5
+AngleClass:0
+FullName:Lausanne 300
+WritingScript:Roman
+OutlineFileName:/Volumes/Samsung_T5G/Project Archive (Channel)/CE0000-CHANNEL/INDESIGN/Brand Guidelines/CHANNEL-BRAND-GUIDELINES Folder/Document fonts/Lausanne-300.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:74496
+FileModTime:583413607
+NameArray:0,Mac,4,Lausanne 300
+NameArray:0,Win,1,Lausanne 250
+NameArray:0,Win,16,Lausanne
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:Wingdings3
+FamilyName:Wingdings 3
+StyleName:Regular
+MenuName:Wingdings 3
+StyleBits:0
+WeightClass:400
+WidthClass:5
+AngleClass:0
+FullName:Wingdings 3
+WritingScript:Roman
+OutlineFileName:/Volumes/Samsung_T5G/Project Archive (Channel)/CE0000-CHANNEL/INDESIGN/Brand Guidelines/CHANNEL-BRAND-GUIDELINES Folder/Document fonts/Wingdings 3.ttf
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:38308
+FileModTime:695113400
+NameArray:0,Mac,4,Wingdings 3
+NameArray:0,Win,1,Wingdings 3
+%EndFont
+

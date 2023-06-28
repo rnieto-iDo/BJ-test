@@ -1,0 +1,25 @@
+@import '../../../../../styles/globals/variables/colors.scss';
+
+.MainContainer {
+    padding-left: 24px;
+    padding-right: 39px;
+    .SearchBar {
+        :global(.select-container){
+            display: none;
+        }
+    }
+    .Line{
+        box-shadow: 0 0.25px 0 $gray1;
+        height: 1px;
+        margin-bottom: 40px;
+    }
+    .GridContainer{
+        width: 100%;
+        height: 710px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-row-gap: 48px;
+        grid-column-gap: 24px;
+        overflow-y: auto;
+    }
+}
